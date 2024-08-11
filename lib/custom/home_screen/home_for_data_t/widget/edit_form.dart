@@ -22,48 +22,36 @@ class _InFoState extends State<EdFo> {
   //
   TextEditingController name = TextEditingController();
   TextEditingController pass = TextEditingController();
-  TextEditingController num = TextEditingController();
-  TextEditingController colege = TextEditingController();
-  TextEditingController tkss = TextEditingController();
+  TextEditingController emil = TextEditingController();
   //
   Crud crud = Crud();
 
   bool isLoading = false;
 
   editSt() async {
-    if (name.text != "" &&
-        pass.text != "" &&
-        num.text != "" &&
-        colege.text != "" &&
-        tkss.text != "") {
+    if (name.text != "" && pass.text != "" && emil.text != "") {
       isLoading = true;
       setState(() {});
-      var responseTime = await crud
-          .postRequest(linkFrequencyStudent, {"search_value": num.text});
 
-      var response = await crud.postRequest(linkEidtStudent, {
+      var response = await crud.postRequest(linkEditTeacher, {
         "name": name.text,
         "pass": pass.text,
-        "num": num.text,
-        "college": colege.text,
-        "tkss": tkss.text,
-        "time": responseTime['data'][0]['frequency'].toString(),
-        "id_st": widget.stData['id_st'].toString()
+        "emil": emil.text,
+        "id_te": widget.stData['id_te'].toString()
       });
       isLoading = false;
       setState(() {});
 
       if (response['status'] == "success") {
-        Navigator.of(context).pushReplacementNamed('home');
+        Navigator.of(context).pushReplacementNamed('homeTe');
       } else {
         AwesomeDialog(
           context: context,
           dialogType: DialogType.info,
           animType: AnimType.rightSlide,
-          title: 'info',
-          desc: 'خطأ في الاتصال',
+          title: '!!!',
+          desc: 'لم يتم التعديل',
         ).show();
-        setState(() {});
       }
     } else {
       AwesomeDialog(
@@ -81,15 +69,17 @@ class _InFoState extends State<EdFo> {
   void initState() {
     name.text = widget.stData["name"];
     pass.text = widget.stData["pass"];
-    num.text = widget.stData["num"];
-    colege.text = widget.stData["college"];
-    tkss.text = widget.stData["tkss"];
+    emil.text = widget.stData["emil"];
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: bgColor,
+        iconTheme: const IconThemeData(color: colorwhite),
+      ),
       body: isLoading == true
           ? const Center(
               child: CircularProgressIndicator(),
@@ -129,20 +119,12 @@ class _InFoState extends State<EdFo> {
                             mycontroller: pass,
                           ),
                           CustomInput(
-                            hintText: 'رقم القيد',
-                            mycontroller: num,
+                            hintText: 'البريد الالكتروني',
+                            mycontroller: emil,
                           ),
                           CustomInput(
                             hintText: 'الاسم',
                             mycontroller: name,
-                          ),
-                          CustomInput(
-                            hintText: 'التخصص',
-                            mycontroller: tkss,
-                          ),
-                          CustomInput(
-                            hintText: 'الكلية',
-                            mycontroller: colege,
                           ),
                         ],
                       ),

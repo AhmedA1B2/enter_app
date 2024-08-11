@@ -9,7 +9,7 @@ import 'package:flutter/material.dart';
 
 getStudent() async {
   var response = await crud
-      .postRequest(linkViewStudent, {"id": sharedPref.getString("id")});
+      .postRequest(linkViewTeacher, {"id_te": sharedPref.getString("id")});
 
   return response;
 }
@@ -68,22 +68,10 @@ class _MyWidgetState extends State<MyWidget> {
                   dataa: 'تعديل',
                 ),
                 TextTable(
-                  dataa: 'المعدل العام',
-                ),
-                TextTable(
-                  dataa: 'التقدير',
-                ),
-                TextTable(
-                  dataa: 'الفصل الدراسي',
-                ),
-                TextTable(
-                  dataa: 'القسم',
-                ),
-                TextTable(
                   dataa: 'الكلية',
                 ),
                 TextTable(
-                  dataa: 'رقم القيد',
+                  dataa: 'البريد الالكتروني',
                 ),
                 TextTable(
                   dataa: 'كلمة المرور',
@@ -136,16 +124,17 @@ class _MyWidgetState extends State<MyWidget> {
                                           btnOkOnPress: () async {
                                             var response = await crud
                                                 .postRequest(
-                                                    linkDeleteStudent, {
-                                              "id_st": snapshot.data['data'][i]
-                                                      ['id_st']
+                                                    linkDeleteTeacher, {
+                                              "id_te": snapshot.data['data'][i]
+                                                      ['id_te']
                                                   .toString()
                                             });
                                             if (response['status'] ==
                                                 "success") {
                                               // ignore: use_build_context_synchronously
                                               Navigator.of(context)
-                                                  .pushReplacementNamed('home');
+                                                  .pushReplacementNamed(
+                                                      'homeTe');
                                             }
                                           },
                                           btnOkColor: redColor,
@@ -196,22 +185,10 @@ class _MyWidgetState extends State<MyWidget> {
                               ),
                               Center(
                                   child: Text(
-                                      "${snapshot.data['data'][i]['mo']}")),
-                              Center(
-                                  child: Text(
-                                      "${snapshot.data['data'][i]['tq']}")),
-                              Center(
-                                  child: Text(
-                                      "${snapshot.data['data'][i]['time']}")),
-                              Center(
-                                  child: Text(
-                                      "${snapshot.data['data'][i]['tkss']}")),
-                              Center(
-                                  child: Text(
                                       "${snapshot.data['data'][i]['college']}")),
                               Center(
                                   child: Text(
-                                      "${snapshot.data['data'][i]['num']}")),
+                                      "${snapshot.data['data'][i]['emil']}")),
                               Center(
                                   child: Text(
                                       "${snapshot.data['data'][i]['pass']}")),

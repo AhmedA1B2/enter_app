@@ -60,10 +60,9 @@ class _InFoState extends State<EdFo> {
           context: context,
           dialogType: DialogType.info,
           animType: AnimType.rightSlide,
-          title: 'info',
-          desc: 'خطأ في الاتصال',
+          title: '!!!',
+          desc: 'لم يتم التعديل',
         ).show();
-        setState(() {});
       }
     } else {
       AwesomeDialog(
@@ -90,6 +89,10 @@ class _InFoState extends State<EdFo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: bgColor,
+        iconTheme: const IconThemeData(color: colorwhite),
+      ),
       body: isLoading == true
           ? const Center(
               child: CircularProgressIndicator(),

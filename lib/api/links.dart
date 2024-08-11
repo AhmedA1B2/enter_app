@@ -28,6 +28,6 @@ const String linkSearchCode = "$linkServerName/code/search.php";
 
 const String linkAddTeacher = "$linkServerName/teacher/add.php";
 const String linkViewTeacher = "$linkServerName/teacher/view.php";
-const String linkEidtTeacher = "$linkServerName/teacher/eidt.php";
+const String linkEditTeacher = "$linkServerName/teacher/edit.php";
 const String linkDeleteTeacher = "$linkServerName/teacher/delete.php";
 const String linkSearchTeacher = "$linkServerName/teacher/search.php";
