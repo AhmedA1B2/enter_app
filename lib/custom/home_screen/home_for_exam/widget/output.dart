@@ -68,9 +68,6 @@ class _MyWidgetState extends State<MyWidget> {
                   dataa: 'الفصل الدراسي',
                 ),
                 TextTable(
-                  dataa: 'المادة',
-                ),
-                TextTable(
                   dataa: 'الدرجة',
                 ),
                 TextTable(
@@ -138,6 +135,9 @@ class _MyWidgetState extends State<MyWidget> {
                 ),
                 TextTable(
                   dataa: 'الدرجة',
+                ),
+                TextTable(
+                  dataa: 'المادة',
                 ),
                 TextTable(
                   dataa: 'كلمة المرور',
@@ -264,76 +264,76 @@ class _MyWidgetState extends State<MyWidget> {
                                       "${snapshot.data['data'][i]['time']}")),
                               Center(
                                   child: Text(
-                                      "${snapshot.data['data'][i]['m12']}")),
-                              Center(
-                                  child: Text(
                                       "${snapshot.data['data'][i]['d12']}")),
                               Center(
                                   child: Text(
-                                      "${snapshot.data['data'][i]['m11']}")),
+                                      "${snapshot.data['data'][i]['m12']}")),
                               Center(
                                   child: Text(
                                       "${snapshot.data['data'][i]['d11']}")),
                               Center(
                                   child: Text(
-                                      "${snapshot.data['data'][i]['m10']}")),
+                                      "${snapshot.data['data'][i]['m11']}")),
                               Center(
                                   child: Text(
                                       "${snapshot.data['data'][i]['d10']}")),
                               Center(
                                   child: Text(
-                                      "${snapshot.data['data'][i]['m9']}")),
+                                      "${snapshot.data['data'][i]['m10']}")),
                               Center(
                                   child: Text(
                                       "${snapshot.data['data'][i]['d9']}")),
                               Center(
                                   child: Text(
-                                      "${snapshot.data['data'][i]['m8']}")),
+                                      "${snapshot.data['data'][i]['m9']}")),
                               Center(
                                   child: Text(
                                       "${snapshot.data['data'][i]['d8']}")),
                               Center(
                                   child: Text(
-                                      "${snapshot.data['data'][i]['m7']}")),
+                                      "${snapshot.data['data'][i]['m8']}")),
                               Center(
                                   child: Text(
                                       "${snapshot.data['data'][i]['d7']}")),
                               Center(
                                   child: Text(
-                                      "${snapshot.data['data'][i]['m6']}")),
+                                      "${snapshot.data['data'][i]['m7']}")),
                               Center(
                                   child: Text(
                                       "${snapshot.data['data'][i]['d6']}")),
                               Center(
                                   child: Text(
-                                      "${snapshot.data['data'][i]['m5']}")),
+                                      "${snapshot.data['data'][i]['m6']}")),
                               Center(
                                   child: Text(
                                       "${snapshot.data['data'][i]['d5']}")),
                               Center(
                                   child: Text(
-                                      "${snapshot.data['data'][i]['m4']}")),
+                                      "${snapshot.data['data'][i]['m5']}")),
                               Center(
                                   child: Text(
                                       "${snapshot.data['data'][i]['d4']}")),
                               Center(
                                   child: Text(
-                                      "${snapshot.data['data'][i]['m3']}")),
+                                      "${snapshot.data['data'][i]['m4']}")),
                               Center(
                                   child: Text(
                                       "${snapshot.data['data'][i]['d3']}")),
                               Center(
                                   child: Text(
-                                      "${snapshot.data['data'][i]['m2']}")),
+                                      "${snapshot.data['data'][i]['m3']}")),
                               Center(
                                   child: Text(
                                       "${snapshot.data['data'][i]['d2']}")),
                               Center(
                                   child: Text(
-                                      "${snapshot.data['data'][i]['m1']}")),
+                                      "${snapshot.data['data'][i]['m2']}")),
                               Center(
                                   child: Text(
                                       "${snapshot.data['data'][i]['d1']}")),
+                              Center(
+                                  child: Text(
+                                      "${snapshot.data['data'][i]['m1']}")),
                               Center(
                                   child: Text(
                                       "${snapshot.data['data'][i]['pass']}")),

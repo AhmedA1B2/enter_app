@@ -18,6 +18,8 @@ const String linkViewExam = "$linkServerName/exam/view.php";
 const String linkEidtExam = "$linkServerName/exam/eidt.php";
 const String linkDeleteExam = "$linkServerName/exam/delete.php";
 const String linkSearchExam = "$linkServerName/exam/search.php";
+const String linkNexamDelete = "$linkServerName/n_exam/delete.php";
+const String linkEndSemester = "$linkServerName/n_exam/end_semester.php";
 
 const String linkAddCode = "$linkServerName/code/add.php";
 const String linkViewCode = "$linkServerName/code/view.php";

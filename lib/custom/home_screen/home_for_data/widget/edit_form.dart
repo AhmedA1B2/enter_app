@@ -23,7 +23,6 @@ class _InFoState extends State<EdFo> {
   TextEditingController name = TextEditingController();
   TextEditingController pass = TextEditingController();
   TextEditingController num = TextEditingController();
-  TextEditingController colege = TextEditingController();
   TextEditingController tkss = TextEditingController();
   //
   Crud crud = Crud();
@@ -34,7 +33,6 @@ class _InFoState extends State<EdFo> {
     if (name.text != "" &&
         pass.text != "" &&
         num.text != "" &&
-        colege.text != "" &&
         tkss.text != "") {
       isLoading = true;
       setState(() {});
@@ -45,7 +43,6 @@ class _InFoState extends State<EdFo> {
         "name": name.text,
         "pass": pass.text,
         "num": num.text,
-        "college": colege.text,
         "tkss": tkss.text,
         "time": responseTime['data'][0]['frequency'].toString(),
         "id_st": widget.stData['id_st'].toString()
@@ -81,7 +78,6 @@ class _InFoState extends State<EdFo> {
     name.text = widget.stData["name"];
     pass.text = widget.stData["pass"];
     num.text = widget.stData["num"];
-    colege.text = widget.stData["college"];
     tkss.text = widget.stData["tkss"];
     super.initState();
   }
@@ -142,10 +138,6 @@ class _InFoState extends State<EdFo> {
                           CustomInput(
                             hintText: 'التخصص',
                             mycontroller: tkss,
-                          ),
-                          CustomInput(
-                            hintText: 'الكلية',
-                            mycontroller: colege,
                           ),
                         ],
                       ),

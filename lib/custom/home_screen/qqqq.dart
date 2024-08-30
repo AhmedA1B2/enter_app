@@ -1,5 +1,6 @@
 import 'package:enter_sirte_university_php/custom/home_screen/go_to/chat.dart';
 import 'package:enter_sirte_university_php/custom/home_screen/go_to/code.dart';
+import 'package:enter_sirte_university_php/custom/home_screen/go_to/end_semester.dart';
 import 'package:enter_sirte_university_php/custom/home_screen/go_to/home.dart';
 import 'package:enter_sirte_university_php/custom/home_screen/go_to/home_t.dart';
 import 'package:enter_sirte_university_php/custom/home_screen/home_for_exam/exam/exqq.dart';
@@ -46,8 +47,9 @@ class _QqqqState extends State<Qqqq> {
             const GoToHomeTe(),
             const GoToCode(),
             const GoToChat(),
+            const GoToEndSemester(),
             SizedBox(
-              height: 500,
+              height: 400,
               child: Column(
                 children: [
                   const Spacer(),

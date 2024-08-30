@@ -48,6 +48,20 @@ class _InFoState extends State<EdFoQ> {
   TextEditingController m12 = TextEditingController();
   TextEditingController d12 = TextEditingController();
   TextEditingController nm = TextEditingController();
+  //
+
+  TextEditingController dn1 = TextEditingController();
+  TextEditingController dn2 = TextEditingController();
+  TextEditingController dn3 = TextEditingController();
+  TextEditingController dn4 = TextEditingController();
+  TextEditingController dn5 = TextEditingController();
+  TextEditingController dn6 = TextEditingController();
+  TextEditingController dn7 = TextEditingController();
+  TextEditingController dn8 = TextEditingController();
+  TextEditingController dn9 = TextEditingController();
+  TextEditingController dn10 = TextEditingController();
+  TextEditingController dn11 = TextEditingController();
+  TextEditingController dn12 = TextEditingController();
 
   //
 
@@ -88,6 +102,20 @@ class _InFoState extends State<EdFoQ> {
         "d11": d11.text,
         "m12": m12.text,
         "d12": d12.text,
+        //
+        "dn1": dn1.text,
+        "dn2": dn2.text,
+        "dn3": dn3.text,
+        "dn4": dn4.text,
+        "dn5": dn5.text,
+        "dn6": dn6.text,
+        "dn7": dn7.text,
+        "dn8": dn8.text,
+        "dn9": dn9.text,
+        "dn10": dn10.text,
+        "dn11": dn11.text,
+        "dn12": dn12.text,
+        "in_finl": "1",
         "time": widget.exData["time"].toString(),
         "id_ex": widget.exData['id_ex'].toString()
       });
@@ -114,37 +142,48 @@ class _InFoState extends State<EdFoQ> {
       setState(() {});
     }
   }
-  //
-  // CollectionReference student = FirebaseFirestore.instance.collection('exam');
 
   @override
   void initState() {
-    pass.text = widget.exData["pass"];
-    num.text = widget.exData["idnum"];
-    m1.text = widget.exData["m1"];
-    d1.text = widget.exData["d1"];
-    m2.text = widget.exData["m2"];
-    d2.text = widget.exData["d2"];
-    m3.text = widget.exData["m3"];
-    d3.text = widget.exData["d3"];
-    m4.text = widget.exData["m4"];
-    d4.text = widget.exData["d4"];
-    m5.text = widget.exData["m5"];
-    d5.text = widget.exData["d5"];
-    m6.text = widget.exData["m6"];
-    d6.text = widget.exData["d6"];
-    m7.text = widget.exData["m7"];
-    d7.text = widget.exData["d7"];
-    m8.text = widget.exData["m8"];
-    d8.text = widget.exData["d8"];
-    m9.text = widget.exData["m9"];
-    d9.text = widget.exData["d9"];
-    m10.text = widget.exData["m10"];
-    d10.text = widget.exData["d10"];
-    m11.text = widget.exData["m11"];
-    d11.text = widget.exData["d11"];
-    m12.text = widget.exData["m12"];
-    d12.text = widget.exData["d12"];
+    pass.text = widget.exData["pass"].toString();
+    num.text = widget.exData["idnum"].toString();
+    m1.text = widget.exData["m1"].toString();
+    d1.text = widget.exData["d1"].toString();
+    m2.text = widget.exData["m2"].toString();
+    d2.text = widget.exData["d2"].toString();
+    m3.text = widget.exData["m3"].toString();
+    d3.text = widget.exData["d3"].toString();
+    m4.text = widget.exData["m4"].toString();
+    d4.text = widget.exData["d4"].toString();
+    m5.text = widget.exData["m5"].toString();
+    d5.text = widget.exData["d5"].toString();
+    m6.text = widget.exData["m6"].toString();
+    d6.text = widget.exData["d6"].toString();
+    m7.text = widget.exData["m7"].toString();
+    d7.text = widget.exData["d7"].toString();
+    m8.text = widget.exData["m8"].toString();
+    d8.text = widget.exData["d8"].toString();
+    m9.text = widget.exData["m9"].toString();
+    d9.text = widget.exData["d9"].toString();
+    m10.text = widget.exData["m10"].toString();
+    d10.text = widget.exData["d10"].toString();
+    m11.text = widget.exData["m11"].toString();
+    d11.text = widget.exData["d11"].toString();
+    m12.text = widget.exData["m12"].toString();
+    d12.text = widget.exData["d12"].toString();
+    //
+    // dn1.text = widget.exData["dn1"].toString();
+    // dn2.text = widget.exData["dn2"].toString();
+    // dn3.text = widget.exData["dn3"].toString();
+    // dn4.text = widget.exData["dn4"].toString();
+    // dn5.text = widget.exData["dn5"].toString();
+    // dn6.text = widget.exData["dn6"].toString();
+    // dn7.text = widget.exData["dn7"].toString();
+    // dn8.text = widget.exData["dn8"].toString();
+    // dn9.text = widget.exData["dn9"].toString();
+    // dn10.text = widget.exData["dn10"].toString();
+    // dn11.text = widget.exData["dn11"].toString();
+    // dn12.text = widget.exData["dn12"].toString();
     super.initState();
   }
 
@@ -204,6 +243,138 @@ class _InFoState extends State<EdFoQ> {
                           Center(
                             child: FloatingActionButton(
                               onPressed: () {
+                                showFinl1() {
+                                  if (widget.exData["in_finl"].toString() ==
+                                      "0") {
+                                    return CustomInputQ(
+                                        hintText: 'درجة الامتحان النهائي',
+                                        mycontroller: dn1);
+                                  } else {
+                                    return const SizedBox();
+                                  }
+                                }
+
+                                showFinl2() {
+                                  if (widget.exData["in_finl"].toString() ==
+                                      "0") {
+                                    return CustomInputQ(
+                                        hintText: 'درجة الامتحان النهائي',
+                                        mycontroller: dn2);
+                                  } else {
+                                    return const SizedBox();
+                                  }
+                                }
+
+                                showFinl3() {
+                                  if (widget.exData["in_finl"].toString() ==
+                                      "0") {
+                                    return CustomInputQ(
+                                        hintText: 'درجة الامتحان النهائي',
+                                        mycontroller: dn3);
+                                  } else {
+                                    return const SizedBox();
+                                  }
+                                }
+
+                                showFinl4() {
+                                  if (widget.exData["in_finl"].toString() ==
+                                      "0") {
+                                    return CustomInputQ(
+                                        hintText: 'درجة الامتحان النهائي',
+                                        mycontroller: dn4);
+                                  } else {
+                                    return const SizedBox();
+                                  }
+                                }
+
+                                showFinl5() {
+                                  if (widget.exData["in_finl"].toString() ==
+                                      "0") {
+                                    return CustomInputQ(
+                                        hintText: 'درجة الامتحان النهائي',
+                                        mycontroller: dn5);
+                                  } else {
+                                    return const SizedBox();
+                                  }
+                                }
+
+                                showFinl6() {
+                                  if (widget.exData["in_finl"].toString() ==
+                                      "0") {
+                                    return CustomInputQ(
+                                        hintText: 'درجة الامتحان النهائي',
+                                        mycontroller: dn6);
+                                  } else {
+                                    return const SizedBox();
+                                  }
+                                }
+
+                                showFinl7() {
+                                  if (widget.exData["in_finl"].toString() ==
+                                      "0") {
+                                    return CustomInputQ(
+                                        hintText: 'درجة الامتحان النهائي',
+                                        mycontroller: dn7);
+                                  } else {
+                                    return const SizedBox();
+                                  }
+                                }
+
+                                showFinl8() {
+                                  if (widget.exData["in_finl"].toString() ==
+                                      "0") {
+                                    return CustomInputQ(
+                                        hintText: 'درجة الامتحان النهائي',
+                                        mycontroller: dn8);
+                                  } else {
+                                    return const SizedBox();
+                                  }
+                                }
+
+                                showFinl9() {
+                                  if (widget.exData["in_finl"].toString() ==
+                                      "0") {
+                                    return CustomInputQ(
+                                        hintText: 'درجة الامتحان النهائي',
+                                        mycontroller: dn9);
+                                  } else {
+                                    return const SizedBox();
+                                  }
+                                }
+
+                                showFinl10() {
+                                  if (widget.exData["in_finl"].toString() ==
+                                      "0") {
+                                    return CustomInputQ(
+                                        hintText: 'درجة الامتحان النهائي',
+                                        mycontroller: dn10);
+                                  } else {
+                                    return const SizedBox();
+                                  }
+                                }
+
+                                showFinl11() {
+                                  if (widget.exData["in_finl"].toString() ==
+                                      "0") {
+                                    return CustomInputQ(
+                                        hintText: 'درجة الامتحان النهائي',
+                                        mycontroller: dn11);
+                                  } else {
+                                    return const SizedBox();
+                                  }
+                                }
+
+                                showFinl12() {
+                                  if (widget.exData["in_finl"].toString() ==
+                                      "0") {
+                                    return CustomInputQ(
+                                        hintText: 'درجة الامتحان النهائي',
+                                        mycontroller: dn12);
+                                  } else {
+                                    return const SizedBox();
+                                  }
+                                }
+
                                 inmaoad = [];
                                 setState(() {
                                   int subjectsCount = int.parse(nm.text);
@@ -223,6 +394,8 @@ class _InFoState extends State<EdFoQ> {
                                               mycontroller: d1,
                                             ),
                                             const Spacer(),
+                                            showFinl1(),
+                                            const Spacer()
                                           ],
                                         ),
                                       );
@@ -242,6 +415,8 @@ class _InFoState extends State<EdFoQ> {
                                               mycontroller: d2,
                                             ),
                                             const Spacer(),
+                                            showFinl2(),
+                                            const Spacer()
                                           ],
                                         ),
                                       );
@@ -261,6 +436,8 @@ class _InFoState extends State<EdFoQ> {
                                               mycontroller: d3,
                                             ),
                                             const Spacer(),
+                                            showFinl3(),
+                                            const Spacer()
                                           ],
                                         ),
                                       );
@@ -280,6 +457,8 @@ class _InFoState extends State<EdFoQ> {
                                               mycontroller: d4,
                                             ),
                                             const Spacer(),
+                                            showFinl4(),
+                                            const Spacer()
                                           ],
                                         ),
                                       );
@@ -299,6 +478,8 @@ class _InFoState extends State<EdFoQ> {
                                               mycontroller: d5,
                                             ),
                                             const Spacer(),
+                                            showFinl5(),
+                                            const Spacer()
                                           ],
                                         ),
                                       );
@@ -318,6 +499,8 @@ class _InFoState extends State<EdFoQ> {
                                               mycontroller: d6,
                                             ),
                                             const Spacer(),
+                                            showFinl6(),
+                                            const Spacer()
                                           ],
                                         ),
                                       );
@@ -337,6 +520,8 @@ class _InFoState extends State<EdFoQ> {
                                               mycontroller: d7,
                                             ),
                                             const Spacer(),
+                                            showFinl7(),
+                                            const Spacer()
                                           ],
                                         ),
                                       );
@@ -356,6 +541,8 @@ class _InFoState extends State<EdFoQ> {
                                               mycontroller: d8,
                                             ),
                                             const Spacer(),
+                                            showFinl8(),
+                                            const Spacer()
                                           ],
                                         ),
                                       );
@@ -375,6 +562,8 @@ class _InFoState extends State<EdFoQ> {
                                               mycontroller: d9,
                                             ),
                                             const Spacer(),
+                                            showFinl9(),
+                                            const Spacer()
                                           ],
                                         ),
                                       );
@@ -394,6 +583,8 @@ class _InFoState extends State<EdFoQ> {
                                               mycontroller: d10,
                                             ),
                                             const Spacer(),
+                                            showFinl10(),
+                                            const Spacer()
                                           ],
                                         ),
                                       );
@@ -413,6 +604,8 @@ class _InFoState extends State<EdFoQ> {
                                               mycontroller: d11,
                                             ),
                                             const Spacer(),
+                                            showFinl11(),
+                                            const Spacer()
                                           ],
                                         ),
                                       );
@@ -432,6 +625,8 @@ class _InFoState extends State<EdFoQ> {
                                               mycontroller: d12,
                                             ),
                                             const Spacer(),
+                                            showFinl12(),
+                                            const Spacer()
                                           ],
                                         ),
                                       );
