@@ -23,6 +23,7 @@ class _InFoState extends State<EdFoQ> {
 
   TextEditingController pass = TextEditingController();
   TextEditingController num = TextEditingController();
+  TextEditingController time = TextEditingController();
   TextEditingController m1 = TextEditingController();
   TextEditingController d1 = TextEditingController();
   TextEditingController m2 = TextEditingController();
@@ -78,6 +79,7 @@ class _InFoState extends State<EdFoQ> {
       var response = await crud.postRequest(linkEidtExam, {
         "idnum": num.text,
         "pass": pass.text,
+        "time": time.text,
         "m1": m1.text,
         "d1": d1.text,
         "m2": m2.text,
@@ -116,7 +118,6 @@ class _InFoState extends State<EdFoQ> {
         "dn11": dn11.text,
         "dn12": dn12.text,
         "in_finl": "1",
-        "time": widget.exData["time"].toString(),
         "id_ex": widget.exData['id_ex'].toString()
       });
       isLoading = false;
@@ -235,6 +236,10 @@ class _InFoState extends State<EdFoQ> {
                           CustomInputQ(
                             hintText: 'رقم القيد',
                             mycontroller: num,
+                          ),
+                          CustomInputQ(
+                            hintText: "الفصل/السنه الدراسيه",
+                            mycontroller: time,
                           ),
                           Wrap(
                             alignment: WrapAlignment.center,

@@ -2,7 +2,6 @@ import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:enter_sirte_university_php/api/links.dart';
 import 'package:enter_sirte_university_php/custom/home_screen/home_for_code/code/sarch_data.dart';
 import 'package:enter_sirte_university_php/main.dart';
-import 'package:enter_sirte_university_php/vars/color.dart';
 import 'package:flutter/material.dart';
 
 class GoToEndSemester extends StatelessWidget {
