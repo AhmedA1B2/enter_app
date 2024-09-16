@@ -10,7 +10,7 @@ class CustomTextFormField extends StatelessWidget {
     this.onChanged,
     this.onSaved,
     required this.mycontroller,
-    required this.validator,
+     this.validator,
   });
 
   final String hintText;

@@ -1,3 +1,4 @@
+import 'package:enter_sirte_university_php/custom/home_screen/home_for_message/custom/choose.dart';
 import 'package:enter_sirte_university_php/custom/home_screen/home_for_message/custom/input_chat.dart';
 import 'package:enter_sirte_university_php/custom/home_screen/home_for_message/custom/output_chat.dart';
 import 'package:enter_sirte_university_php/vars/color.dart';
@@ -16,20 +17,24 @@ class _SendState extends State<Send> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Container(
-          height: SizeConfig.screenHeight! * 0.73,
-          decoration: const BoxDecoration(
-            borderRadius: BorderRadius.vertical(bottom: Radius.circular(20)),
-            boxShadow: [
-              BoxShadow(
-                blurRadius: 5.1,
-                blurStyle: BlurStyle.outer,
-                color: bgColor,
-              ),
-            ],
+        SizedBox(
+          height: SizeConfig.screenHeight! * 0.6,
+          child: Container(
+            height: SizeConfig.screenHeight! * 0.73,
+            decoration: const BoxDecoration(
+              borderRadius: BorderRadius.vertical(bottom: Radius.circular(20)),
+              boxShadow: [
+                BoxShadow(
+                  blurRadius: 5.1,
+                  blurStyle: BlurStyle.outer,
+                  color: bgColor,
+                ),
+              ],
+            ),
+            child: const OutputChat(),
           ),
-          child: const OutputChat(),
         ),
+        const Choose(),
         const InPoutChat(),
         const Spacer(),
       ],

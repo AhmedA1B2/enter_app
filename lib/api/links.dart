@@ -33,3 +33,9 @@ const String linkViewTeacher = "$linkServerName/teacher/view.php";
 const String linkEditTeacher = "$linkServerName/teacher/edit.php";
 const String linkDeleteTeacher = "$linkServerName/teacher/delete.php";
 const String linkSearchTeacher = "$linkServerName/teacher/search.php";
+
+//////////////////////////////////////////////////////////////////////
+
+const String linkAddNoti = "$linkServerName/notifications/admin_addNoti.php";
+const String linkViewNoti = "$linkServerName/notifications/admin_view.php";
+const String linkDeleteNoti = "$linkServerName/notifications/admin_delete.php";
